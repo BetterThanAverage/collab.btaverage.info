@@ -1,46 +1,104 @@
 :root {
-    --background: #252e3a;
-    --foreground: #defff2;
-    --accent: #028090;
-    --accent-dark: #00505a;
-    --font-family-header: 'Silkscreen';
-    --font-family-content: 'Playfair Display';
+  --background: #252e3a;
+  --foreground: #defff2;
+  --accent: #028090;
+  --accent-dark: #00505a;
+  --font-family-header: "Silkscreen";
+  --font-family-content: "Playfair Display";
 }
 
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    background-color: var(--background);
-    color: var(--foreground);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    font-family: var(--font-family-content), serif;
-    font-kerning: 1px;
-    letter-spacing: .5px;
+  background-color: var(--background);
+  color: var(--foreground);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  font-family: var(--font-family-content), serif;
+  font-kerning: 1px;
+  letter-spacing: 0.5px;
+  margin-bottom: 30px;
 }
 
-h1, h2, h3, h4 {
-    font-family: var(--font-family-header), sans-serif;
-    letter-spacing: normal;
+h1 {
+  font-size: 5em;
+}
+
+@media only screen and (max-width: 670px) {
+    h1 {
+        font-size: 3.3em;
+    }
+}
+h2 {
+  margin-top: 20px;
+  font-size: 2em;
+}
+h3 {
+    font-size: 1.6em;
+  margin-top: 7px;
+}
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-family-header), sans-serif;
+  letter-spacing: normal;
 }
 
 .button {
-    display: inline-block;
-    border-radius: 5px;
-    background-color: var(--accent);
-    text-decoration: none;
-    font-family: var(--font-family-header), sans-serif;
-    padding: 10px;
-    transition: background-color .2s ease;
-    color: var(--foreground);
-    letter-spacing: normal;
+  display: inline-block;
+  border-radius: 5px;
+  background-color: var(--accent);
+  text-decoration: none;
+  font-family: var(--font-family-header), sans-serif;
+  padding: 10px;
+  transition: background-color 0.2s ease;
+  color: var(--foreground);
+  letter-spacing: normal;
 }
 
 .button:hover {
-    background-color: var(--accent-dark);
+  background-color: var(--accent-dark);
+}
+
+main {
+  max-width: 95%;
+  margin: auto;
+}
+p,
+ul,
+dl {
+  max-width: 800px;
+  margin: auto;
+}
+p.importantbody {
+    font-size: 1.1em;
+}
+
+ul {
+  list-style-type: none;
+}
+ul.otherlist {
+    margin-top: 10px;
+}
+li {
+  margin-top: 7px;
+}
+li::before {
+  content: "✧ ";
+  font-size: small;
+}
+
+dl {
+  margin-top: 10px;
+}
+dt {
+  margin-top: 8px;
+  font-weight: bolder;
+  font-size: 1.1em;
 }
